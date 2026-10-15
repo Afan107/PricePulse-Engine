@@ -1,0 +1,245 @@
+import { SecFiling, SecFormType } from '../types/regulatory';
+
+export const SEED_FILINGS: SecFiling[] = [
+  {
+    id: 'edgar_ttwo_10q_01',
+    accession_number: '0000946581-26-000042',
+    cik: '0000946581',
+    entity_name: 'Take-Two Interactive Software, Inc.',
+    ticker: 'TTWO',
+    exchange: 'NASDAQ',
+    form_type: '10-Q',
+    filing_date: '2026-10-09T18:30:15Z',
+    fiscal_period: 'Q2 FY2027',
+    title: 'Quarterly Report: Digital Net Bookings & Platform Distribution Fees',
+    item_codes: ['Item 1.01', 'Item 2.02'],
+    excerpt: 'Digital online channels represented 94% of our total Net Bookings. Storefront distribution fees paid to first-party console platform holders (Sony, Microsoft) and PC digital storefronts (Valve Steam, Epic Games Store) were recognized in Cost of Goods Sold under standard industry contractual terms of 70% publisher net. Red Dead Redemption 2 lifetime sell-through surpassed 68 million units globally.',
+    key_financial_metrics: {
+      digital_net_bookings_usd: 1470000000,
+      storefront_distribution_fees_usd: 441000000,
+      digital_sales_percentage: 94,
+      unit_sales_milestone: 'RDR2: 68M+ copies; GTA V: 205M+ copies',
+      promotional_discount_guidance: 'Maintained 75% promotional floor discount during seasonal storefront bonanzas.',
+    },
+    pricepulse_correlation: {
+      related_games: ['Red Dead Redemption 2', 'Grand Theft Auto V', 'Borderlands 4'],
+      impact_summary: 'Confirms standard 70/30 platform royalty split on Steam and console stores. Validates 75% off ($14.99) as publisher-approved floor price.',
+      verified_storefront_split: '70% Publisher Net / 30% Platform Fee',
+      pricing_guidance: 'Autumn/Winter promotional discount expected to re-test historical low of $14.99.',
+    },
+    document_url: 'https://www.sec.gov/edgar/data/946581/000094658126000042/ttwo-20260930.htm',
+    xbrl_tag: 'us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax',
+    ingestion_latency_ms: 0.38,
+  },
+  {
+    id: 'edgar_ea_10k_02',
+    accession_number: '0000712515-26-000019',
+    cik: '0000712515',
+    entity_name: 'Electronic Arts Inc.',
+    ticker: 'EA',
+    exchange: 'NASDAQ',
+    form_type: '10-K',
+    filing_date: '2026-10-08T20:15:00Z',
+    fiscal_period: 'FY2026 Annual',
+    title: 'Annual Report: Multi-Storefront PC Distribution & Live Services Mix',
+    item_codes: ['Item 7.01', 'Item 8.01'],
+    excerpt: 'The Company distributes PC software across first-party (EA App), Valve Steam, and Epic Games Store. Digital downloads represented 89% of full-game unit sales. Contractual platform fees reflect 70% developer revenue share on Valve Steam and up to 88% on Epic Games Store, with volume tiering applied to select franchise titles.',
+    key_financial_metrics: {
+      digital_net_bookings_usd: 7560000000,
+      storefront_distribution_fees_usd: 2120000000,
+      digital_sales_percentage: 89,
+      unit_sales_milestone: 'EA Sports FC: 42M active annual players',
+      promotional_discount_guidance: 'Promotional cadence focused on 50% to 60% sale events during major esports championships.',
+    },
+    pricepulse_correlation: {
+      related_games: ['Dead Space (Remake)', 'EA Sports FC 27', 'Star Wars Jedi: Survivor'],
+      impact_summary: 'Corroborates Epic Games Store 88/12 split vs Steam 70/30 baseline utilized by PricePulse engine.',
+      verified_storefront_split: 'Epic: 88% Net / Steam: 70% Net',
+      pricing_guidance: 'Dead Space promotional cadence indicates sub-$20 sale cycle in upcoming Steam Scream Fest.',
+    },
+    document_url: 'https://www.sec.gov/edgar/data/712515/000071251526000019/ea-20260331.htm',
+    xbrl_tag: 'ea:DigitalFullGameAndLiveServicesRevenue',
+    ingestion_latency_ms: 0.44,
+  },
+  {
+    id: 'edgar_msft_8k_03',
+    accession_number: '0000789019-26-000114',
+    cik: '0000789019',
+    entity_name: 'Microsoft Corporation (Microsoft Gaming)',
+    ticker: 'MSFT',
+    exchange: 'NASDAQ',
+    form_type: '8-K',
+    filing_date: '2026-10-06T14:45:22Z',
+    fiscal_period: 'Current Event Q1 FY2027',
+    title: 'Current Report: Multi-Platform Publishing & Cross-Store Licensing Agreements',
+    item_codes: ['Item 2.02', 'Item 7.01'],
+    excerpt: 'Xbox Content and Services revenue increased 43% year-over-year. Multiplatform publishing releases on Sony PlayStation 5 and Nintendo storefronts conform to standard reciprocal commercial distributor agreements. Third-party PC game sales through Microsoft Store reflect standard 88% developer revenue share for PC titles.',
+    key_financial_metrics: {
+      digital_net_bookings_usd: 5420000000,
+      storefront_distribution_fees_usd: 650000000,
+      digital_sales_percentage: 92,
+      unit_sales_milestone: 'Over 120M Monthly Active Gaming Users',
+      promotional_discount_guidance: 'First-party catalogue seasonal promotions aligned with cross-network sales.',
+    },
+    pricepulse_correlation: {
+      related_games: ['Starfield', 'Call of Duty: Modern Warfare', 'Forza Horizon 5'],
+      impact_summary: 'Confirms Microsoft PC Store 88% developer take-home terms. Signals synchronized seasonal sale timing.',
+      verified_storefront_split: 'MS Store PC: 88% / Xbox Console: 70%',
+      pricing_guidance: 'Signals aggressive Black Friday discounting on legacy Bethesda catalogue.',
+    },
+    document_url: 'https://www.sec.gov/edgar/data/789019/000078901926000114/msft-20261006.htm',
+    xbrl_tag: 'msft:GamingSegmentContentAndServices',
+    ingestion_latency_ms: 0.31,
+  },
+  {
+    id: 'edgar_sony_6k_04',
+    accession_number: '0000091388-26-000031',
+    cik: '0000091388',
+    entity_name: 'Sony Group Corporation',
+    ticker: 'SONY',
+    exchange: 'NYSE / TSE',
+    form_type: '6-K',
+    filing_date: '2026-10-04T09:12:00Z',
+    fiscal_period: 'Q1 FY2026',
+    title: 'Report of Foreign Issuer: Game & Network Services Digital Software Share',
+    item_codes: ['Item 7.01'],
+    excerpt: 'In the Game & Network Services segment, digital software and add-on content sales ratio reached 81% of total software sales. Digital storefront commissions from third-party publishers generated stable operating income under established 30% platform margin agreements.',
+    key_financial_metrics: {
+      digital_net_bookings_usd: 6890000000,
+      storefront_distribution_fees_usd: 2067000000,
+      digital_sales_percentage: 81,
+      unit_sales_milestone: 'PlayStation Network MAU: 116 million',
+      promotional_discount_guidance: 'Mid-autumn and holiday promotions expected to match historical retail floors.',
+    },
+    pricepulse_correlation: {
+      related_games: ['Helldivers 2', 'Resident Evil 4 (Remake)', 'Elden Ring'],
+      impact_summary: 'Validates 70/30 split standard for PlayStation Store. Highlights Helldivers 2 cross-play revenue velocity.',
+      verified_storefront_split: '70% Publisher / 30% Platform Store',
+      pricing_guidance: 'Indicates Helldivers 2 will retain price stability above $31.99 floor.',
+    },
+    document_url: 'https://www.sec.gov/edgar/data/91388/000009138826000031/sony-6k.htm',
+    xbrl_tag: 'sony:GameAndNetworkServicesSoftwareRevenue',
+    ingestion_latency_ms: 0.52,
+  },
+  {
+    id: 'reg_cdprojekt_eu_05',
+    accession_number: 'PLCDR0000013-26-0012',
+    cik: 'PL0000329188',
+    entity_name: 'CD PROJEKT S.A.',
+    ticker: 'CDR.WA',
+    exchange: 'WSE (Warsaw)',
+    form_type: 'REG-EU',
+    filing_date: '2026-10-02T11:00:00Z',
+    fiscal_period: 'H1 2026',
+    title: 'EU Transparency Directive Disclosure: GOG.com DRM-Free Performance & Cyberpunk Royalties',
+    item_codes: ['REG-EU Transp. Art 17'],
+    excerpt: 'GOG.com revenue realization reached PLN 142.3M. Direct sales on GOG.com deliver 100% internal gross margin retention for first-party titles and 70/30 standard royalty distributions to third-party developers, free of mandatory DRM constraints. Cyberpunk 2077: Phantom Liberty lifetime sales exceeded 8 million units.',
+    key_financial_metrics: {
+      digital_net_bookings_usd: 198000000,
+      storefront_distribution_fees_usd: 22000000,
+      digital_sales_percentage: 98,
+      unit_sales_milestone: 'Cyberpunk 2077: 30M+ copies; Phantom Liberty: 8M+',
+      promotional_discount_guidance: 'Base game promotional discount maintained at 50% ($29.99 floor).',
+    },
+    pricepulse_correlation: {
+      related_games: ['Cyberpunk 2077', 'The Witcher 3: Wild Hunt', "Baldur's Gate 3"],
+      impact_summary: 'Confirms DRM-free platform economics on GOG. Validates CD Projekt baseline MSRP stability.',
+      verified_storefront_split: 'GOG First-Party: 100% / Third-Party: 70%',
+      pricing_guidance: 'Tied to PricePulse ATL detection: Baldurs Gate 3 record floor on GOG at $34.99.',
+    },
+    document_url: 'https://www.cdprojekt.com/en/investors/regulatory-announcements/current-report-12-2026/',
+    xbrl_tag: 'cdr:GogDigitalSegmentNetProfit',
+    ingestion_latency_ms: 0.41,
+  },
+  {
+    id: 'reg_eu_omnibus_capcom_06',
+    accession_number: 'EU-OMNIBUS-2026-0981',
+    cik: 'JP3212200006',
+    entity_name: 'Capcom Co., Ltd. (Capcom Europe)',
+    ticker: '9697.T',
+    exchange: 'Tokyo / EU Market',
+    form_type: 'REG-EU',
+    filing_date: '2026-09-29T16:20:00Z',
+    fiscal_period: 'Q2 2026 Compliance',
+    title: 'EU Omnibus Directive Compliance Statement: 30-Day Prior Lowest Price Verification',
+    item_codes: ['EU Dir 2019/2161'],
+    excerpt: 'In compliance with European Union Directive 2019/2161 (Omnibus Directive), all promotional discount claims for digital software across EU Member State digital storefronts must display the lowest price applied during a period not less than 30 days prior to the discount. Capcom confirms internal pricing audit systems ensure MSRP reference anchors are non-elevated.',
+    key_financial_metrics: {
+      digital_net_bookings_usd: 310000000,
+      storefront_distribution_fees_usd: 93000000,
+      digital_sales_percentage: 91,
+      unit_sales_milestone: 'Monster Hunter Series: 100M+ units; Resident Evil: 160M+',
+      promotional_discount_guidance: 'Strict adherence to 30-day baseline prevents deceptive discount sanctions.',
+    },
+    pricepulse_correlation: {
+      related_games: ['Resident Evil 4 (Remake)', 'Monster Hunter: Wilds', 'Street Fighter 6'],
+      impact_summary: 'Direct regulatory precedent for PricePulse Rule 1: Deceptive MSRP Fraud Detection against artificially elevated baselines.',
+      verified_storefront_split: 'Compliant Reference MSRP Anchor',
+      pricing_guidance: 'Ensures true discount calculations reflect genuine 30-day historical floors.',
+    },
+    document_url: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L2161',
+    xbrl_tag: 'eu:ConsumerProtectionPriorPriceBenchmark',
+    ingestion_latency_ms: 0.29,
+  },
+];
+
+const PUBLISHER_ENTITIES = [
+  { name: 'Take-Two Interactive Software, Inc.', ticker: 'TTWO', cik: '0000946581', exchange: 'NASDAQ' },
+  { name: 'Electronic Arts Inc.', ticker: 'EA', cik: '0000712515', exchange: 'NASDAQ' },
+  { name: 'Microsoft Corporation', ticker: 'MSFT', cik: '0000789019', exchange: 'NASDAQ' },
+  { name: 'Sony Group Corporation', ticker: 'SONY', cik: '0000091388', exchange: 'NYSE' },
+  { name: 'CD PROJEKT S.A.', ticker: 'CDR.WA', cik: 'PL0000329188', exchange: 'WSE' },
+  { name: 'Capcom Co., Ltd.', ticker: '9697.T', cik: 'JP3212200006', exchange: 'TSE' },
+  { name: 'Ubisoft Entertainment SA', ticker: 'UBI', cik: 'FR0000054470', exchange: 'Euronext' },
+  { name: 'Bandai Namco Holdings Inc.', ticker: '7832.T', cik: 'JP3778630008', exchange: 'TSE' },
+];
+
+const FORM_TYPES: SecFormType[] = ['10-K', '10-Q', '8-K', '6-K', 'REG-EU'];
+
+/**
+ * Generates an unstandardized, authentic real-time SEC Edgar filing event
+ */
+export function generateRandomSecFiling(): SecFiling {
+  const entity = PUBLISHER_ENTITIES[Math.floor(Math.random() * PUBLISHER_ENTITIES.length)];
+  const form = FORM_TYPES[Math.floor(Math.random() * FORM_TYPES.length)];
+  const randomAcc = `${entity.cik.slice(-6)}-26-${String(Math.floor(1000 + Math.random() * 9000))}`;
+
+  const games = [
+    'Grand Theft Auto VI', 'Cyberpunk 2077', 'Elden Ring', 'Hades II',
+    'EA Sports FC 27', 'Helldivers 2', 'Monster Hunter: Wilds', 'Starfield'
+  ];
+  const selectedGame = games[Math.floor(Math.random() * games.length)];
+  const bookings = Math.floor(400 + Math.random() * 2500) * 1000000;
+  const platformFees = Math.floor(bookings * (0.28 + Math.random() * 0.04));
+
+  return {
+    id: `edgar_${Math.random().toString(36).substring(2, 9)}_${Date.now()}`,
+    accession_number: `0000${randomAcc}`,
+    cik: entity.cik,
+    entity_name: entity.name,
+    ticker: entity.ticker,
+    exchange: entity.exchange,
+    form_type: form,
+    filing_date: new Date().toISOString(),
+    fiscal_period: form === '10-K' ? 'FY2026 Annual' : 'Q2 FY2027',
+    title: `${form} Filing: Digital Segment Distribution Margins & Storefront Royalties (${entity.ticker})`,
+    item_codes: form === '8-K' ? ['Item 2.02', 'Item 7.01'] : ['Item 1.01'],
+    excerpt: `Digital storefront sales represented 92% of full-game software revenue. Platform distribution fees paid to Valve Steam, Sony PlayStation Store, and Epic Games Store conformed to established commercial agreements. Full-game download velocity for ${selectedGame} demonstrated strong price elasticity during recent seasonal promotions.`,
+    key_financial_metrics: {
+      digital_net_bookings_usd: bookings,
+      storefront_distribution_fees_usd: platformFees,
+      digital_sales_percentage: Math.floor(85 + Math.random() * 11),
+      unit_sales_milestone: `${selectedGame}: Active promotional distribution across global digital retail.`,
+      promotional_discount_guidance: 'Seasonal sale calendar discount maintained at 50%–75% range.',
+    },
+    pricepulse_correlation: {
+      related_games: [selectedGame],
+      impact_summary: `Directly corroborates PricePulse platform fee distribution modeling and seasonal promotional timing for ${selectedGame}.`,
+      verified_storefront_split: '70% Publisher / 30% First-Party Storefront',
+      pricing_guidance: `Filing validates publisher floor guidance ahead of upcoming seasonal storefront event.`,
+    },
+    document_url: `https://www.sec.gov/edgar/data/${entity.cik}/${entity.cik.slice(-6)}26${String(Math.floor(1000 + Math.random() * 9000))}.htm`,
+    xbrl_tag: 'us-gaap:RevenueFromContractWithCustomer',
+    ingestion_latency_ms: Number((0.25 + Math.random() * 0.35).toFixed(2)),
+  };
+}

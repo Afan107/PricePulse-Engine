@@ -1,0 +1,6 @@
+{
+  "name": "PricePulse Engine - Gaming Market Normalization & Analytics",
+  "description": "High-throughput gaming market data normalization, fraud detection, developer margin calculation, and predictive pricing pipeline for commercial B2B APIs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
